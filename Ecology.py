@@ -6,7 +6,7 @@ from Tree import Tree
 from Bear import Bear
 from Lumberjack import Lumberjack
 
-class Ecology():
+class Ecology:
   def __init__(self):
     self.Forest = Forest(settings.grid_size, settings.grid_dimensions)
     self.tree_count = self.Forest.grid_dimensions / 2  # 50%

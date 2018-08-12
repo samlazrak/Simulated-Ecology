@@ -1,6 +1,6 @@
-class Tree():
+class Tree:
   def __init__(self, position):
-    self.position = (position)
+    self.position = position
     self.sapling: bool = True
     self.tree: bool = False
     self.elder_tree: bool = False
@@ -11,10 +11,10 @@ class Tree():
 
   def check_age(self):
     self.age = self.age + 1
-    if self.sapling == True and self.age >= 12:
+    if self.sapling is True and self.age >= 12:
       self.grow()
 
-    if self.tree == True and self.age >= 120:
+    if self.tree is True and self.age >= 120:
       self.grow()
 
   def grow(self):
@@ -27,8 +27,8 @@ class Tree():
       self.elder_tree = True
 
   def spawn(self):
-    if self.sapling == False and self.tree == True:
+    if self.sapling is False and self.tree is True:
       print('I tried to spawn')
 
-    if self.sapling == False and self.elder_tree == True:
+    if self.sapling is False and self.elder_tree is True:
       print('I tried to spawn elder style')

@@ -1,6 +1,6 @@
-class Lumberjack():
+class Lumberjack:
   def __init__(self, position):
-    self.position = (position)
+    self.position = position
     self.lumber = 0
 
   def location(self):

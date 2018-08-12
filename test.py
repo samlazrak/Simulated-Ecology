@@ -3,7 +3,8 @@ import time
 
 Ecology = Ecology()
 
-def treeAgeTest():
+
+def tree_age_test():
   time.sleep(1)
   print('--------------------------')
   print('type of tree:')
@@ -20,16 +21,19 @@ def treeAgeTest():
   print('new age:')
   print(Ecology.Forest.trees[0].__dict__['age'])
 
-def forestStatCheck():
+
+def forest_stat_check():
   print(Ecology.Forest.trees[0].__dict__)
   print(Ecology.Forest.lumberjacks[0].__dict__)
   print(Ecology.Forest.bears[0].__dict__)
 
+
 def test():
   Ecology.populate()
-  forestStatCheck()
+  forest_stat_check()
 
   for x in range(0, 121):
-    treeAgeTest()
+    tree_age_test()
+
 
 test()
