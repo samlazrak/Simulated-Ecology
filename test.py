@@ -1,4 +1,4 @@
-from Ecology import Ecology
+from Objects.Ecology import Ecology
 import time
 
 Ecology = Ecology()
@@ -37,10 +37,10 @@ def test():
   Ecology.populate()
   Ecology.position()
 
-  # grid_test()
-  # position_test()
-  # forest_stat_check()
-  # for x in range(0, 121):
-  #   tree_age_test()
+  grid_test()
+  position_test()
+  forest_stat_check()
+  for x in range(0, 121):
+    tree_age_test()
 
 test()

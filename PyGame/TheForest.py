@@ -1,8 +1,9 @@
 import pygame
-import settings
+from Config import settings
+
 pygame.init()
 
-gameDisplay = pygame.display.set_mode((settings.display_width,settings.display_height))
+gameDisplay = pygame.display.set_mode((settings.display_width, settings.display_height))
 pygame.display.set_caption('The Forest')
 
 clock = pygame.time.Clock()

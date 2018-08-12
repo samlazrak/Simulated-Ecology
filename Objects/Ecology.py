@@ -1,9 +1,10 @@
-import settings, random
+import random
+from Config import settings
 
-from Forest import Forest
-from Tree import Tree
-from Bear import Bear
-from Lumberjack import Lumberjack
+from Objects.Forest import Forest
+from Objects.Tree import Tree
+from Objects.Bear import Bear
+from Objects.Lumberjack import Lumberjack
 
 class Ecology:
   def __init__(self):
@@ -11,12 +12,12 @@ class Ecology:
     self.tree_count = self.Forest.grid_dimensions / 2  # 50%
     self.lumberjack_count = self.Forest.grid_dimensions / 100 * 10 # 10%
     self.bear_count = self.Forest.grid_dimensions / 100 * 2 # 2%
-    self.map = [[[['.','.','.'] for x in range(0, settings.grid_size)]for x in range(0, settings.grid_size)] for x in range(0, settings.grid_size)]
+    self.map = [[[['.','.','.'] for x in range(0, settings.grid_size)] for x in range(0, settings.grid_size)] for x in range(0, settings.grid_size)]
     self.grid(self)
 
   @staticmethod
   def position_generator():
-    x = random.randint(0, settings.grid_size-1)
+    x = random.randint(0, settings.grid_size - 1)
     return x
 
   @staticmethod
@@ -26,10 +27,10 @@ class Ecology:
         for z in range(0, settings.grid_size):
           self.map[x][y][z] = (y, z, x)
     if settings.multiple_forests is False:
-      for x in range(0, settings.grid_size-1):
+      for x in range(0, settings.grid_size - 1):
         self.map.pop()
     elif settings.multiple_forests is True:
-      for x in range(0, settings.grid_size-settings.number_of_forests):
+      for x in range(0, settings.grid_size - settings.number_of_forests):
         self.map.pop()
 
   def populate(self):
