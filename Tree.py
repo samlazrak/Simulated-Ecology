@@ -18,12 +18,11 @@ class Tree():
       self.grow()
 
   def grow(self):
-    if self.sapling:
+    if self.sapling and self.age >= 12:
       self.sapling = False
       self.tree = True
-      self.age = 0
 
-    if self.tree:
+    if self.tree and self.age >= 120:
       self.tree = False
       self.elder_tree = True
 
