@@ -1,10 +1,11 @@
 class Tree:
-  def __init__(self, position):
+  def __init__(self, position, tag):
     self.position = position
     self.sapling: bool = True
     self.tree: bool = False
     self.elder_tree: bool = False
     self.age = 0
+    self.tag: int = tag
 
   def location(self):
     return self.position

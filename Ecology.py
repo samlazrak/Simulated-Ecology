@@ -26,7 +26,7 @@ class Ecology:
     for x in range(0, settings.grid_size):
       for y in range(0, settings.grid_size):
         for z in range(0, settings.grid_size):
-          self.map[x][y][z] = (x, y, z)
+          self.map[x][y][z] = (y, z, x)
     if settings.multiple_forests is False:
       for x in range(0, settings.grid_size-1):
         self.map.pop()
@@ -36,9 +36,9 @@ class Ecology:
 
   def populate(self):
     for x in range(0, int(self.tree_count)):
-      self.Forest.trees.append(Tree(self.position_generator()))
+      self.Forest.trees.append(Tree(self.position_generator(), x))
     for x in range(0, int(self.lumberjack_count)):
-      self.Forest.lumberjacks.append(Lumberjack(self.position_generator()))
+      self.Forest.lumberjacks.append(Lumberjack(self.position_generator(), x))
     for x in range(0, int(self.bear_count)):
-      self.Forest.bears.append(Bear(self.position_generator()))
+      self.Forest.bears.append(Bear(self.position_generator(), x))
 
