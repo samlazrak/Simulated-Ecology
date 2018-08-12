@@ -16,8 +16,8 @@ class Ecology:
 
   @staticmethod
   def position_generator():
-    x = random.randint(0, settings.grid_dimensions)
-    y = random.randint(0, settings.grid_dimensions)
+    x = random.randint(0, settings.grid_size-1)
+    y = random.randint(0, settings.grid_size-1)
     position = (x, y)
     return position
 

@@ -9,5 +9,6 @@ green = (0, 128, 0)
 red = (255, 0, 0)
 brown = (128, 128, 0)
 
+# Must be a mutiple of 10
 grid_size = 10
 grid_dimensions = grid_size*grid_size

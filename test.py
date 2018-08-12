@@ -41,8 +41,8 @@ def grid_test():
 
 def test():
   grid_test()
-  # Ecology.populate()
-  # forest_stat_check()
+  Ecology.populate()
+  forest_stat_check()
   # for x in range(0, 121):
   #   tree_age_test()
 
