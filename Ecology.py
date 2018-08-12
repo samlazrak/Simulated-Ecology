@@ -23,8 +23,8 @@ class Ecology:
 
   @staticmethod
   def grid(self):
-    for x in range(0, 10):
-      for y in range(0, 10):
+    for x in range(0, settings.grid_size):
+      for y in range(0, settings.grid_size):
         self.map[x][y] = (x, y)
 
   def populate(self):
