@@ -19,6 +19,7 @@ class Ecology:
     x = random.randint(0, settings.grid_size-1)
     y = random.randint(0, settings.grid_size-1)
     position = (x, y)
+
     return position
 
   @staticmethod
@@ -43,6 +44,11 @@ class Ecology:
       self.Forest.bears.append(Bear(self.position_generator(), x))
 
   def position(self):
-    for x in range(0, len(Forest.trees)):
-      print x
+    for i in range(0, len(self.Forest.trees)):
+      print(self.Forest.trees[i].position[0]+','+self.Forest.trees[i].position[1])
+      # x = self.Forest.trees[i].position[0]
+      # y = self.Forest.trees[i].position[1]
+      # z = self.Forest.trees[i].tag
+      # self.map[x][y][0] = (x, y, z)
+      # print(self.map[x][y][z])
 
