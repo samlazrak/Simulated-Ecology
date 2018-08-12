@@ -11,7 +11,7 @@ class Ecology:
     self.tree_count = self.Forest.grid_dimensions / 2  # 50%
     self.lumberjack_count = self.Forest.grid_dimensions / 100 * 10 # 10%
     self.bear_count = self.Forest.grid_dimensions / 100 * 2 # 2%
-    self.map = [["." for x in range(0, settings.grid_size)] for x in range(0, settings.grid_size)]
+    self.map = [[[['.','.','.'] for x in range(0, settings.grid_size)]for x in range(0, settings.grid_size)] for x in range(0, settings.grid_size)]
     self.grid(self)
 
   @staticmethod
@@ -25,7 +25,14 @@ class Ecology:
   def grid(self):
     for x in range(0, settings.grid_size):
       for y in range(0, settings.grid_size):
-        self.map[x][y] = (x, y)
+        for z in range(0, settings.grid_size):
+          self.map[x][y][z] = (x, y, z)
+    if settings.multiple_forests is False:
+      for x in range(0, settings.grid_size-1):
+        self.map.pop()
+    elif settings.multiple_forests is True:
+      for x in range(0, settings.grid_size-settings.number_of_forests):
+        self.map.pop()
 
   def populate(self):
     for x in range(0, int(self.tree_count)):

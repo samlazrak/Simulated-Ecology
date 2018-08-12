@@ -28,21 +28,12 @@ def forest_stat_check():
   print(Ecology.Forest.bears[0].__dict__)
 
 def grid_test():
-  print(Ecology.map[0])
-  print(Ecology.map[1])
-  print(Ecology.map[2])
-  print(Ecology.map[3])
-  print(Ecology.map[4])
-  print(Ecology.map[5])
-  print(Ecology.map[6])
-  print(Ecology.map[7])
-  print(Ecology.map[8])
-  print(Ecology.map[9])
+  print(Ecology.map)
 
 def test():
-  grid_test()
-  Ecology.populate()
-  forest_stat_check()
+  # grid_test()
+  #Ecology.populate()
+  #forest_stat_check()
   # for x in range(0, 121):
   #   tree_age_test()
 
