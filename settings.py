@@ -8,3 +8,6 @@ forest_green = (34, 139, 34)
 green = (0, 128, 0)
 red = (255, 0, 0)
 brown = (128, 128, 0)
+
+grid_size = (10)
+grid_dimensions = (grid_size*grid_size)

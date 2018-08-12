@@ -9,12 +9,12 @@ clock = pygame.time.Clock()
 
 empty = False
 while not empty:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            empty = True
+  for event in pygame.event.get():
+    if event.type == pygame.QUIT:
+      empty = True
 
-    pygame.display.update()
-    clock.tick(60)
+  pygame.display.update()
+  clock.tick(60)
 
 pygame.quit()
 quit()
