@@ -1,8 +1,9 @@
 class Lumberjack:
-  def __init__(self, position, tag):
-    self.position = position
+  def __init__(self, x, y, z):
+    self.x: int = x
+    self.y: int = y
+    self.z: int = z
     self.lumber = 0
-    self.tag: int = tag
 
   def location(self):
     return self.position

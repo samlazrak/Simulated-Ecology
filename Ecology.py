@@ -17,10 +17,7 @@ class Ecology:
   @staticmethod
   def position_generator():
     x = random.randint(0, settings.grid_size-1)
-    y = random.randint(0, settings.grid_size-1)
-    position = (x, y)
-
-    return position
+    return x
 
   @staticmethod
   def grid(self):
@@ -37,18 +34,26 @@ class Ecology:
 
   def populate(self):
     for x in range(0, int(self.tree_count)):
-      self.Forest.trees.append(Tree(self.position_generator(), x))
+      self.Forest.trees.append(Tree(self.position_generator(),self.position_generator(), x))
     for x in range(0, int(self.lumberjack_count)):
-      self.Forest.lumberjacks.append(Lumberjack(self.position_generator(), x))
+      self.Forest.lumberjacks.append(Lumberjack(self.position_generator(),self.position_generator(), x))
     for x in range(0, int(self.bear_count)):
-      self.Forest.bears.append(Bear(self.position_generator(), x))
+      self.Forest.bears.append(Bear(self.position_generator(),self.position_generator(), x))
 
   def position(self):
     for i in range(0, len(self.Forest.trees)):
-      print(self.Forest.trees[i].position[0]+','+self.Forest.trees[i].position[1])
-      # x = self.Forest.trees[i].position[0]
-      # y = self.Forest.trees[i].position[1]
-      # z = self.Forest.trees[i].tag
-      # self.map[x][y][0] = (x, y, z)
-      # print(self.map[x][y][z])
+      x = self.Forest.trees[i].x
+      y = self.Forest.trees[i].y
+      z = self.Forest.trees[i].z
+      self.map[0][x][y] = (x,y,z)
+    for i in range(0, len(self.Forest.lumberjacks)):
+      x = self.Forest.lumberjacks[i].x
+      y = self.Forest.lumberjacks[i].y
+      z = self.Forest.lumberjacks[i].z
+      self.map[0][x][y] = (x,y,z)
+    for i in range(0, len(self.Forest.bears)):
+      x = self.Forest.bears[i].x
+      y = self.Forest.bears[i].y
+      z = self.Forest.bears[i].z
+      self.map[0][x][y] = (x,y,z)
 

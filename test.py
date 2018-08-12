@@ -30,13 +30,17 @@ def forest_stat_check():
 def grid_test():
   print(Ecology.map)
 
+def position_test():
+  print(Ecology.map)
+
 def test():
-  # grid_test()
   Ecology.populate()
   Ecology.position()
+
+  # grid_test()
+  # position_test()
   # forest_stat_check()
   # for x in range(0, 121):
   #   tree_age_test()
-
 
 test()
