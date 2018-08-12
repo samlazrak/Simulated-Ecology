@@ -42,3 +42,7 @@ class Ecology:
     for x in range(0, int(self.bear_count)):
       self.Forest.bears.append(Bear(self.position_generator(), x))
 
+  def position(self):
+    for x in range(0, len(Forest.trees)):
+      print x
+

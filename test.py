@@ -31,7 +31,8 @@ def grid_test():
   print(Ecology.map)
 
 def test():
-  grid_test()
+  Ecology.position()
+  # grid_test()
   # Ecology.populate()
   # forest_stat_check()
   # for x in range(0, 121):
