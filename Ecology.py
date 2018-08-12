@@ -1,5 +1,4 @@
-import settings
-import random
+import settings, random
 
 from Forest import Forest
 from Tree import Tree
@@ -12,6 +11,8 @@ class Ecology:
     self.tree_count = self.Forest.grid_dimensions / 2  # 50%
     self.lumberjack_count = self.Forest.grid_dimensions / 100 * 10 # 10%
     self.bear_count = self.Forest.grid_dimensions / 100 * 2 # 2%
+    self.map = [["." for x in range(0, settings.grid_size)] for x in range(0, settings.grid_size)]
+    self.grid(self)
 
   @staticmethod
   def position_generator():
@@ -19,6 +20,12 @@ class Ecology:
     y = random.randint(0, settings.grid_dimensions)
     position = (x, y)
     return position
+
+  @staticmethod
+  def grid(self):
+    for x in range(0, 10):
+      for y in range(0, 10):
+        self.map[x][y] = (x, y)
 
   def populate(self):
     for x in range(0, int(self.tree_count)):
