@@ -27,3 +27,4 @@ class Ecology():
       self.Forest.lumberjacks.append(Lumberjack(self.position_generator()))
     for x in range(0, int(self.bear_count)):
       self.Forest.bears.append(Bear(self.position_generator()))
+
