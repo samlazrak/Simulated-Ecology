@@ -31,5 +31,6 @@ def test():
   print(The_Forest.trees[0].__dict__['position'])
   print(The_Forest.lumberjacks[0].__dict__['position'])
   print(The_Forest.bears[0].__dict__['position'])
+  print(The_Forest.lumberjacks[0].__dict__['lumber'])
 
 test()
