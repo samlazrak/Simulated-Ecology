@@ -7,10 +7,7 @@ class Tree:
     self.tree: bool = False
     self.elder_tree: bool = False
     self.age = 0
-
-
-  def location(self):
-    return self.position
+    self.alive: bool = True
 
   def check_age(self):
     self.age = self.age + 1
@@ -35,3 +32,9 @@ class Tree:
 
     if self.sapling is False and self.elder_tree is True:
       print('I tried to spawn elder style')
+
+  def kill(self):
+    self.alive = False
+    self.x = None
+    self.y = None
+    self.z = None

@@ -9,7 +9,5 @@ class Bear:
     return self.position
 
   def maul(self):
-    self.maulings = self.maulings+1
+    self.maulings = self.maulings + 1
     return self.maulings
-
-

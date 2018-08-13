@@ -1,5 +1,6 @@
-from Objects.Ecology import Ecology
 import time
+
+from Objects.Ecology import Ecology
 
 Ecology = Ecology()
 
@@ -27,20 +28,25 @@ def forest_stat_check():
   print(Ecology.Forest.lumberjacks[0].__dict__)
   print(Ecology.Forest.bears[0].__dict__)
 
+
 def grid_test():
   print(Ecology.map)
+
 
 def position_test():
   print(Ecology.map)
 
+
 def test():
   Ecology.populate()
   Ecology.position()
+  Ecology.cycle()
 
-  grid_test()
-  position_test()
-  forest_stat_check()
-  for x in range(0, 121):
-    tree_age_test()
+  # grid_test()
+  # position_test()
+  # forest_stat_check()
+  # for x in range(0, 121):
+  #   tree_age_test()
+
 
 test()

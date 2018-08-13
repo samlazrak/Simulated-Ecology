@@ -11,5 +11,3 @@ class Lumberjack:
   def chop(self):
     self.lumber = self.lumber + 1
     return self.lumber
-
-
