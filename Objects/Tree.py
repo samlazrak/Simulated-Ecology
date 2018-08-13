@@ -26,12 +26,15 @@ class Tree:
       self.tree = False
       self.elder_tree = True
 
-  def spawn(self):
-    if self.sapling is False and self.tree is True:
-      print('I tried to spawn')
+  def spawn(self, position):
+    print(position)
 
-    if self.sapling is False and self.elder_tree is True:
-      print('I tried to spawn elder style')
+    if self.sapling is True and self.tree is False:
+      return False
+    elif self.sapling is False and self.tree is True:
+      return True
+    elif self.sapling is False and self.elder_tree is True:
+      return True
 
   def kill(self):
     self.alive = False

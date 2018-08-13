@@ -39,7 +39,8 @@ def position_test():
 
 def test():
   Ecology.populate()
-  Ecology.position()
+  # Ecology.position()
+  # while True:
   Ecology.cycle()
 
   # grid_test()
